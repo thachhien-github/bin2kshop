@@ -1,0 +1,11 @@
+# Bật module xử lý Header
+<IfModule mod_headers.c>
+    # Cho phép tất cả các domain truy cập (Hoặc thay * bằng http://localhost:3000 để bảo mật hơn)
+    Header set Access-Control-Allow-Origin "*"
+    
+    # Cho phép các phương thức gửi tin
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+    
+    # Cho phép các loại Header cần thiết
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+</IfModule>
